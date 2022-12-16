@@ -26,6 +26,10 @@ public final class LoggingInstrumentation implements Instrumentation
   }
 
   @Override
+  public void clearOutputChannels() {
+  }
+
+  @Override
   public Instrumentation record(String event)
   {
     stream.println(System.currentTimeMillis() + " " + event);
